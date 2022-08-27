@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        4. Crie cinco objetos JavaScript dentro de um Array contendo
+        nome(texto), idade(número), skills(array), ou seja um total de cinco alunos.
+        Agora crie uma função que receba estes cinco objetos e mais um parâmetro skill.
+        Dependendo da skill enviada mostrar no console.log(), quais alunos têm a skill enviada por parâmetro, mostrar todo o objeto.
+        Exemplo: Pedro, 24, [JavaScript, TypeScript, React].Se mandar chamar a função enviando(alunos, “JavaScript”), precisa mostrar o Pedro e qual mais se encaixa nessa skill.
+        */
+
+        let students = [
+            { name: "Lucas", age: 27, skills: ["html", "css"] },
+            { name: "Joao", age: 25, skills: ["javascript", "html", "css"] },
+            { name: "Maria", age: 23, skills: ["html", "javascript", "typescript"] },
+            { name: "Jose", age: 30, skills: ["bootstrap", "ruby"] },
+            { name: "Marta", age: 33, skills: ["nodejs"] }
+        ];
+
+        let skill = prompt("Informe a skill que deseja buscar: ").toLowerCase();
+
+        console.log(haveSkill(students, skill));
+
+        function haveSkill(array, skill) {
+            return array.filter((value) => value.skills.includes(skill));
+        };
+    </script>
+</body>
+
+</html>

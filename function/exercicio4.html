@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* 
+        4. Crie uma função chamada calcularMedia(nota1, nota2, nota3,
+        nome), que recebe 4 parâmetros sendo três inteiros e um texto
+        (String). Esta função será chamada ao abrir a página e mostrará um
+        alerta com a média. Exemplo: “João, sua média é 70.” A função
+        também deve mostrar no console.log() as notas recebidas. Exemplo
+        “Nota 1: 60,Nota 2: 70,Nota 3: 80”.
+        */
+
+        let grade1;
+        let grade2;
+        let grade3;
+        let name;
+
+        calcAverage(grade1, grade2, grade3, name);
+
+        function calcAverage(grade1, grade2, grade3, name) {
+            name = prompt(`Qual o seu nome? `);
+            grade1 = Number(prompt(`Digite a sua primeira nota:`));
+            grade2 = Number(prompt(`Digite a sua segunda nota:`));
+            grade3 = Number(prompt(`Digite a sua terceira nota:`));
+
+            let average = ((grade1 + grade2 + grade3) / 3).toFixed(2);
+            alert(`${name}, sua média é ${average}`);
+
+            console.log(`Nota1: ${grade1}\n Nota2: ${grade2}\n Nota3: ${grade3}`);
+        };
+    </script>
+
+</body>
+
+</html>
